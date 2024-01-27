@@ -1,0 +1,57 @@
+{
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "abematviewer",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.sou1ka.tauri.abematviewer",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null,
+      "dangerousRemoteDomainIpcAccess": [
+        {
+          "domain": "abema.tv",
+          "windows": ["abematviewer"],
+          "enableTauriAPI": true
+        }
+      ]
+    },
+    "windows": [
+      {
+        "label": "abematviewer",
+        "fullscreen": false,
+        "resizable": true,
+        "title": "abematviewer",
+        "width": 1280,
+        "height": 720,
+        "minWidth": 800,
+        "minHeight": 450,
+        "url": "https://abema.tv/"
+      }
+    ]
+  }
+}
